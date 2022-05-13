@@ -14,4 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 // § Rotta per la pagina index di 'trains'
-Route::get('/', 'TrainController@index');
+Route::get('/', 'TrainController@index')->name('all-trains');
+
+Route::get('/day', 'TrainController@currentDay')->name('day-trains');

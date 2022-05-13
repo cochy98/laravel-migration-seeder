@@ -7,7 +7,7 @@
 {{-- Punto dove implemento questa section nella pagina principale --}}
 @section('main')    
   <div class="container">
-    <h1 class="py-4">Tutti i treni disponibili</h1>
+    <h1 class="py-4">{{ $message }}</h1>
     <div class="table-responsive">
       <table class="table">
         <thead>

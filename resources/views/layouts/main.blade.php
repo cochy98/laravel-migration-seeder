@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
+  {{-- Includo l'header --}}
+  @include('partials.header')
+
   <main>
     {{-- Visualizzo la pagina corrente --}}
     @yield('main')
