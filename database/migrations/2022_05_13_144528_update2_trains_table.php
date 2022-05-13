@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class UpdateTrainsTable extends Migration
+class Update2TrainsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class UpdateTrainsTable extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            //
-            $table->boolean('is_deleted')->nullable()->change();
+            $table->date('departure_date');
         });
     }
 
@@ -28,7 +27,6 @@ class UpdateTrainsTable extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
             //
-            $table->boolean('is_deleted');
         });
     }
 }
