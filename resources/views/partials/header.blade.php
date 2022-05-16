@@ -8,10 +8,14 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('all-trains') }}">All Trains</a>
+            <a  class="nav-link {{ (Route::currentRouteName() == 'all-trains') ? 'active' : '' }}" 
+                href="{{ route('all-trains') }}">All Trains
+            </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ route('day-trains') }}">Current Day</a>
+            <a  class="nav-link {{ (Route::currentRouteName() == 'day-trains') ? 'active' : '' }}" 
+                href="{{ route('day-trains') }}">Current Day
+            </a>
           </li>
         </ul>
       </div>
