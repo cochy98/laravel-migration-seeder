@@ -2,7 +2,7 @@
 @extends('layouts.main')
 
 {{-- Do un titolo a questa section --}}
-@section('title', 'Trains')
+@section('title', $title)
 
 {{-- Punto dove implemento questa section nella pagina principale --}}
 @section('main')    
