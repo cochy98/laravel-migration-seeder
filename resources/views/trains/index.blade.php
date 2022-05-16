@@ -33,8 +33,8 @@
               <td>{{ $train->departure_date }}</td>
               <td>{{ $train->departure_time }}</td>
               <td>{{ $train->arrival_time }}</td>
-              <td>{{ $train->in_time }}</td>
-              <td>{{ $train->is_deleted }}</td>
+              <td> @if ($train->in_time) SI @else NO @endif </td>
+              <td> @if ($train->is_deleted) SI @else NO @endif </td>
             </tr>
           </tbody>
         @endforeach
