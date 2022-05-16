@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'TrainController@index')->name('all-trains');
 
 Route::get('/day', 'TrainController@currentDay')->name('day-trains');
+
+Route::get('/details/{id}', 'TrainController@details')->name('train-details');

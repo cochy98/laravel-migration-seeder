@@ -34,11 +34,11 @@ class TrainController extends Controller
     public function details($id)
     {
         // § Recupero tutte le instanze di 'Train' e le passo alla view interessata
-        $trains = Train::where('id', $id)->get();
+        $train = Train::find($id);
         $data = [
-            'message' => 'dettaglio treno',
-            'trains' => $trains
+            'message' => 'Dettaglio treno',
+            'train' => $train
         ];
-        return view('trains.index', $data);
+        return view('trains.show', $data);
     }
 }

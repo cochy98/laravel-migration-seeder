@@ -19,7 +19,6 @@
             <th scope="col">Data</th>
             <th scope="col">Orario partenza</th>
             <th scope="col">Orario Arrivo</th>
-            <th scope="col">Numero carrozze</th>
             <th scope="col">In Orario</th>
             <th scope="col">Cancellato</th>
           </tr>
@@ -27,16 +26,15 @@
         @foreach ($trains as $train)
           <tbody>
             <tr>
-              <th scope="row">{{ $train->train_code }}</th>
+              <th scope="row"><a href="{{ route('train-details', $train->id) }}">{{ $train->train_code }}</a></th>
               <td>{{ $train->agency }}</td>
               <td>{{ $train->departure_station }}</td>
               <td>{{ $train->arrival_station }}</td>
               <td>{{ $train->departure_date }}</td>
               <td>{{ $train->departure_time }}</td>
               <td>{{ $train->arrival_time }}</td>
-              <td>{{ $train->number_of_carriages }}</td>
               <td>{{ $train->in_time }}</td>
-              <td>{{ $train->is_delected }}</td>
+              <td>{{ $train->is_deleted }}</td>
             </tr>
           </tbody>
         @endforeach
