@@ -28,7 +28,7 @@ class UpdateTrainsTable extends Migration
     {
         Schema::table('trains', function (Blueprint $table) {
             //
-            $table->boolean('is_deleted');
+            $table->boolean('is_deleted')->change();
         });
     }
 }
