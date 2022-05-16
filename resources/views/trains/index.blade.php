@@ -7,8 +7,8 @@
 {{-- Punto dove implemento questa section nella pagina principale --}}
 @section('main')    
   <div class="container">
-    <h1 class="py-4">{{ $message }}</h1>
-    <div class="table-responsive">
+    <h1 class="pt-5">{{ $message }}</h1>
+    <div class="table-responsive pb-5">
       <table class="table">
         <thead>
           <tr>
@@ -39,6 +39,10 @@
           </tbody>
         @endforeach
       </table>
+    </div>
+
+    <div class="d-flex justify-content-center pb-5">
+      {{ $trains->links() }}
     </div>
   </div>
 @endsection

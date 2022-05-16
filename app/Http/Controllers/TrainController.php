@@ -12,7 +12,8 @@ class TrainController extends Controller
     public function index()
     {
         // § Recupero tutte le instanze di 'Train' e le passo alla view interessata
-        $trains = Train::orderBy('departure_date', 'asc')->get();
+        //$trains = Train::orderBy('departure_date', 'asc')->get();
+        $trains = Train::orderBy('departure_date', 'asc')->paginate(15);
         $data = [
             'message' => 'Tutti i treni disponibili',
             'trains' => $trains
@@ -23,7 +24,7 @@ class TrainController extends Controller
     public function currentDay()
     {
         // § Recupero tutte le instanze di 'Train' e le passo alla view interessata
-        $trains = Train::where('departure_date', date('Y-m-d'))->get();
+        $trains = Train::where('departure_date', date('Y-m-d'))->paginate(15);
         $data = [
             'message' => 'Treni disponibili per la data odierna',
             'trains' => $trains
